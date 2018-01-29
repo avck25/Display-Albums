@@ -51,7 +51,11 @@ class Results extends Component {
             <tr key={result.collectionId}>
               <td>{index + 1}</td>
               <td>
-                <img src={result.artworkUrl100} className="img-responsive" />
+                <img
+                  src={result.artworkUrl100}
+                  alt="album cover"
+                  className="img-responsive"
+                />
               </td>
               <td>{result.collectionName}</td>
               <td>{result.artistName}</td>
