@@ -54,6 +54,7 @@ class Results extends Component {
                 <img src={result.artworkUrl100} className="img-responsive" />
               </td>
               <td>{result.collectionName}</td>
+              <td>{result.artistName}</td>
               <td>{result.trackCount}</td>
               <td>{result.primaryGenreName}</td>
               <td>{`$${result.collectionPrice}`}</td>
@@ -78,7 +79,8 @@ class Results extends Component {
               <th>#</th>
               <th>Album Cover</th>
               <th>Album</th>
-              <th>Number of Songs</th>
+              <th> Artist</th>
+              <th># Songs</th>
               <th>Genre</th>
               <th>Price</th>
             </tr>
