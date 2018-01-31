@@ -1,7 +1,7 @@
-import * as React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import SearchPage from "./components/SearchPage";
-import resultsPage from "./components/ResultsPage";
+import * as React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import HomePage from './components/HomePage';
+import Results from './components/Results';
 
 export default class App extends React.Component {
   render() {
@@ -9,8 +9,8 @@ export default class App extends React.Component {
       <div>
         <Router>
           <div>
-            <Route exact path="/" component={SearchPage} />
-            <Route exact path="/results" component={resultsPage} />
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/results" component={Results} />
           </div>
         </Router>
       </div>

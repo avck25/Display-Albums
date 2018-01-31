@@ -1,5 +1,5 @@
-import * as types from "./types";
-import axios from "axios";
+import * as types from './types';
+import axios from 'axios';
 
 function setArtist(artist) {
   return dispatch => {
@@ -8,7 +8,6 @@ function setArtist(artist) {
 }
 
 function getResults(artist_name) {
-  console.log(artist_name);
   return async dispatch => {
     try {
       let results = await axios.get(
@@ -22,10 +21,10 @@ function getResults(artist_name) {
   };
 }
 
-function resetResults() {
+function resetState() {
   return dispatch => {
-    dispatch({ type: types.RESET_RESULTS });
+    dispatch({ type: types.RESET_API_STATE });
   };
 }
 
-export { setArtist, getResults, resetResults };
+export { setArtist, getResults, resetState };

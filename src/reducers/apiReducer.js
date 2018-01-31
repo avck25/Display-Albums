@@ -1,10 +1,10 @@
-import * as types from "../actions/types";
+import * as types from '../actions/types';
 
 const apiState = {
-  artist: "",
+  artist: '',
   results: [],
   hasError: null,
-  errMessage: ""
+  errMessage: ''
 };
 
 export default function apiReducer(state = apiState, action) {
@@ -18,8 +18,14 @@ export default function apiReducer(state = apiState, action) {
     case types.ERROR_ON_FETCH:
       return { ...state, hasError: true, errMessage: action.payload };
 
-    case types.RESET_RESULTS:
-      return { ...state, hasError: null, errMessage: "", results: [] };
+    case types.RESET_API_STATE:
+      return {
+        ...state,
+        artist: '',
+        hasError: null,
+        errMessage: '',
+        results: []
+      };
     default:
       return state;
   }
